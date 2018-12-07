@@ -1,7 +1,7 @@
 {
   "name": "screenshot-tweet",
   "version": "1.0.0",
-  "description": "Screenshot a tweet via URL or id",
+  "description": "Screenshot a tweet via URL",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -9,6 +9,7 @@
   "author": "Chris Masters",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^2.4.1",
     "minimist": "^1.2.0",
     "puppeteer": "^1.11.0"
   }
