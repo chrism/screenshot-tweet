@@ -9,6 +9,7 @@
   "author": "Chris Masters",
   "license": "ISC",
   "dependencies": {
+    "minimist": "^1.2.0",
     "puppeteer": "^1.11.0"
   }
 }
