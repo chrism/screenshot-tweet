@@ -4,8 +4,11 @@
   "description": "Screenshot a tweet via URL or id",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "Chris Masters",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^1.11.0"
+  }
 }
