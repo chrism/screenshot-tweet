@@ -10,12 +10,12 @@ const chalk = require('chalk');
   if (!tweet) {
     const errorMsg = chalk.red('Please provide a tweet URL to screenshot.');
     console.log(errorMsg);
-    
+
     process.exit();
   }
 
   const tweetURL = url.parse(tweet);
-  
+
   const [,username,,tweetId] = tweetURL.pathname.split("/");
 
   let path = './tweets';
@@ -36,7 +36,7 @@ const chalk = require('chalk');
   const page = await browser.newPage();
   await page.setViewport({
     width: 800,
-    height: 600,
+    height: 1200,
     deviceScaleFactor: 2
   })
   await page.goto(tweet);
@@ -47,7 +47,7 @@ const chalk = require('chalk');
   });
 
   const tweetEl = await page.$('div.tweet');
-  const tweetDimensions = await tweetEl.boundingBox();  
+  const tweetDimensions = await tweetEl.boundingBox();
 
   await page.screenshot({
     path,
