@@ -32,7 +32,10 @@ const chalk = require('chalk');
 
   path += `/${tweetId}.png`
 
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: ['--lang=en-US,en']
+  });
+
   const page = await browser.newPage();
   await page.setViewport({
     width: 800,
@@ -43,6 +46,7 @@ const chalk = require('chalk');
 
   await page.evaluate(() => {
     document.querySelector('div.tweet').style.borderRadius = 0;
+    document.querySelector('div.tweet').style.border = '1px solid #e6ecf0';
     document.querySelector('div.follow-bar').style.display = 'none';
   });
 
